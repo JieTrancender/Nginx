@@ -1,5 +1,6 @@
 #pragma once
 
+#include "nginx.hpp"
 #include "ngx_unset_value.hpp"
 
 class NgxValue final
@@ -29,6 +30,15 @@ public:
 		if (invalid(c))
 		{
 			c = invalid(p) ? d : p;
+		}
+	}
+
+	//重载merge，实现ngx_str_t的条件赋值操作
+	static void merge(ngx_str_t& c, const ngx_str_t& p, const ngx_str_t& d)
+	{
+		if (!c.data)
+		{
+			c = p.data ? p : d;
 		}
 	}
 
