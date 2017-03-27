@@ -8,7 +8,7 @@ template <typename T>
 class NgxWrapper
 {
 public:
-	//Ôªº¯ÊıÒÆ³ıÀàĞÍÀïµÄÖ¸ÕëĞŞÊÎ
+	//typedef typename boost::remove_pointer<T>::type wrapped_type;
 	typedef typename std::remove_pointer<T>::type wrapped_type;
 
 	typedef wrapped_type* pointer_type;
@@ -39,7 +39,7 @@ public:
 		return get();
 	}
 
-	//Ö¸Õë²Ù×÷·ûÖØÔØ
+	//¿¿¿¿¿¿¿
 	ponter_type operator->() const
 	{
 		return get();
