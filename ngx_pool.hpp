@@ -142,6 +142,7 @@ public:
 		ngx_str_t  temp;
 
 		temp.len = str.len;
+        //ÄÚ´æ³Ø¸´ÖÆ×Ö·û´®
 		temp.data = ngx_pstrdup(get(), &str);
 
 		NgxException::require(temp.data);

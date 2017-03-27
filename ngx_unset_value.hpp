@@ -15,7 +15,7 @@ public:
 		return reinterpret_cast<T*>(-1);
 	}
 
-	//µ¥¼şÀà
+	//get the only global variable
 	static const NgxUnsetValue& get()
 	{
 		static NgxUnsetValue const v = {};

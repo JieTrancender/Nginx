@@ -23,7 +23,7 @@ public:
 	pointer allocate(size_type n)
 	{
 		//转型使用Nginx内存池
-		return reinpterpret_cast<pointer>(ngx_pnalloc(get(), n * sizeof(T)));
+        return reinterpret_cast<pointer>(ngx_pnalloc(get(), n * sizeof(T)));
 	}
 
 	//由Nginx负责内存回收

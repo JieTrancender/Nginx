@@ -1,6 +1,6 @@
 #pragma once
 
-#include "nginx.hpp"
+//#include "nginx.hpp"
 #include "ngx_unset_value.hpp"
 
 class NgxValue final
